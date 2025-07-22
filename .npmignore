@@ -1,0 +1,64 @@
+# Development files
+.gitignore
+.git/
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Source files (only dist is needed)
+nodes/
+credentials/
+*.ts
+!*.d.ts
+
+# Build and config files
+gulpfile.js
+tsconfig.json
+.eslintrc.js
+.prettierrc
+
+# Test files
+test/
+*.test.js
+*.spec.js
+test-*.js
+
+# Documentation source
+docs/
+*.md
+!README.md
+!LICENSE.md
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependencies
+node_modules/
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Environment
+.env
+.env.*
+
+# Temporary
+tmp/
+temp/
+*.tmp
+*.bak
+
+# Package files
+*.tgz
+package-lock.json
+yarn.lock
