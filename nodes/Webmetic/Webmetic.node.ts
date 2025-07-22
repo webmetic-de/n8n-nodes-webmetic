@@ -12,7 +12,7 @@ export class Webmetic implements INodeType {
     group: ["transform"],
     version: 1,
     subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-    description: "Get new company visits data from Webmetic",
+    description: "Get company visits data from Webmetic with date range filtering",
     defaults: {
       name: "Webmetic",
     },
@@ -161,6 +161,51 @@ export class Webmetic implements INodeType {
             },
           },
         },
+      },
+      {
+        displayName: "Additional Fields",
+        name: "additionalFields",
+        type: "collection",
+        default: {},
+        placeholder: "Add Field",
+        displayOptions: {
+          show: {
+            resource: ["newVisits", "intensiveVisits", "returningVisits"],
+            operation: ["get"],
+          },
+        },
+        options: [
+          {
+            displayName: "From Date",
+            name: "from_date",
+            type: "string",
+            default: "-30 days",
+            placeholder: "-30 days",
+            description: "Starting date/time or relative date like '-30 days', '-12 hours'. Examples: '2023-01-01', '-7 days', 'now'",
+            routing: {
+              request: {
+                qs: {
+                  from_date: "={{$value}}",
+                },
+              },
+            },
+          },
+          {
+            displayName: "To Date",
+            name: "to_date",
+            type: "string",
+            default: "now",
+            placeholder: "now",
+            description: "Ending date/time or 'now' for current date/time. Examples: '2023-01-31', 'now'",
+            routing: {
+              request: {
+                qs: {
+                  to_date: "={{$value}}",
+                },
+              },
+            },
+          },
+        ],
       },
     ],
   };

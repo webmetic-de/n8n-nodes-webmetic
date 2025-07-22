@@ -65,12 +65,20 @@ Um diesen Node zu verwenden, benötigen Sie:
 2. Erstellen Sie neue Webmetic API-Zugangsdaten:
    - Geben Sie Ihren API-Schlüssel ein (beginnt mit `wmtc_`)
 3. Konfigurieren Sie den Node:
-   - Wählen Sie "New Visits" als Ressource
+   - Wählen Sie "New Visits", "Intensive Visits" oder "Returning Visits" als Ressource
    - Wählen Sie "Get" als Operation
    - Geben Sie die Domain ein, die Sie verfolgen möchten (z.B. `example.com`)
-4. Führen Sie den Node aus, um neue Unternehmensbesucherdaten abzurufen
+   - Optional: Konfigurieren Sie zusätzliche Felder für Datumsfilterung:
+     - **Von Datum**: Startdatum oder relativer Zeitraum (Standard: "-30 days")
+     - **Bis Datum**: Enddatum oder "now" für aktuelles Datum (Standard: "now")
+4. Führen Sie den Node aus, um Unternehmensbesucherdaten abzurufen
 
-Der Node liefert wertvolle Vertriebsinformationen über Unternehmen, die Ihre Domain zum ersten Mal besuchen.
+Der Node liefert wertvolle Vertriebsinformationen über Unternehmen und deren Besuchsverhalten auf Ihrer Domain.
+
+### Datumsformat-Beispiele:
+- **Relative Zeiten**: `-30 days`, `-12 hours`, `-7 days`
+- **Absolute Daten**: `2023-01-01`, `2023-12-31`  
+- **Aktuell**: `now`
 
 ## Ressourcen
 
@@ -110,12 +118,20 @@ To use this node, you need:
 2. Create new Webmetic API credentials:
    - Enter your API key (starts with `wmtc_`)
 3. Configure the node:
-   - Select "New Visits" as the resource
+   - Select "New Visits", "Intensive Visits", or "Returning Visits" as the resource
    - Select "Get" as the operation
    - Enter the domain you want to track (e.g., `example.com`)
-4. Execute the node to retrieve new company visitor data
+   - Optional: Configure additional fields for date filtering:
+     - **From Date**: Start date or relative time period (default: "-30 days")
+     - **To Date**: End date or "now" for current date (default: "now")
+4. Execute the node to retrieve company visitor data
 
-The node returns valuable sales intelligence about companies visiting your domain for the first time.
+The node returns valuable sales intelligence about companies and their visiting behavior on your domain.
+
+### Date Format Examples:
+- **Relative times**: `-30 days`, `-12 hours`, `-7 days`
+- **Absolute dates**: `2023-01-01`, `2023-12-31`  
+- **Current**: `now`
 
 ## Resources {#resources-en}
 
