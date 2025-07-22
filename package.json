@@ -1,7 +1,7 @@
 {
   "name": "n8n-nodes-webmetic",
-  "version": "0.1.0",
-  "description": "n8n node for Webmetic API - Get new company visits data",
+  "version": "0.2.0",
+  "description": "n8n node for Webmetic API - Get company visits data (new, intensive, and returning visitors)",
   "keywords": [
     "n8n-community-node-package",
     "n8n",

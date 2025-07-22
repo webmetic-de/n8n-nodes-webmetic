@@ -44,6 +44,18 @@ export class Webmetic implements INodeType {
             description:
               "Get companies that have visited a domain for the first time",
           },
+          {
+            name: "Intensive Visits",
+            value: "intensiveVisits",
+            description:
+              "Get companies that have had intensive visits to a domain",
+          },
+          {
+            name: "Returning Visits",
+            value: "returningVisits",
+            description:
+              "Get companies that have visited a domain multiple times",
+          },
         ],
         default: "newVisits",
       },
@@ -75,19 +87,73 @@ export class Webmetic implements INodeType {
         default: "get",
       },
       {
+        displayName: "Operation",
+        name: "operation",
+        type: "options",
+        noDataExpression: true,
+        displayOptions: {
+          show: {
+            resource: ["intensiveVisits"],
+          },
+        },
+        options: [
+          {
+            name: "Get",
+            value: "get",
+            action: "Get intensive visits",
+            description:
+              "Get a list of companies that have had intensive visits to the specified domain",
+            routing: {
+              request: {
+                method: "GET",
+                url: "/intensive-visits",
+              },
+            },
+          },
+        ],
+        default: "get",
+      },
+      {
+        displayName: "Operation",
+        name: "operation",
+        type: "options",
+        noDataExpression: true,
+        displayOptions: {
+          show: {
+            resource: ["returningVisits"],
+          },
+        },
+        options: [
+          {
+            name: "Get",
+            value: "get",
+            action: "Get returning visits",
+            description:
+              "Get a list of companies that have visited the specified domain multiple times",
+            routing: {
+              request: {
+                method: "GET",
+                url: "/returning-visits",
+              },
+            },
+          },
+        ],
+        default: "get",
+      },
+      {
         displayName: "Domain",
         name: "domain",
         type: "string",
         required: true,
         displayOptions: {
           show: {
-            resource: ["newVisits"],
+            resource: ["newVisits", "intensiveVisits", "returningVisits"],
             operation: ["get"],
           },
         },
         default: "",
         placeholder: "example.com",
-        description: "The domain name for retrieving new company visit data",
+        description: "The domain name for retrieving company visit data",
         routing: {
           request: {
             qs: {

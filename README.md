@@ -42,6 +42,10 @@ Folgen Sie der [Installationsanleitung](https://docs.n8n.io/integrations/communi
 
 * **Neue Besuche**
   * Abrufen: Ruft eine Liste von Unternehmen ab, die eine bestimmte Domain zum ersten Mal besucht haben
+* **Intensive Besuche**
+  * Abrufen: Ruft eine Liste von Unternehmen ab, die intensive Besuche auf einer Domain hatten
+* **Wiederkehrende Besuche**
+  * Abrufen: Ruft eine Liste von Unternehmen ab, die eine Domain mehrfach besucht haben
 
 ## Zugangsdaten
 
@@ -83,6 +87,10 @@ Follow the [installation guide](https://docs.n8n.io/integrations/community-nodes
 
 * **New Visits**
   * Get: Retrieve a list of companies that have visited a specified domain for the first time
+* **Intensive Visits**
+  * Get: Retrieve a list of companies that have had intensive visits to a specified domain
+* **Returning Visits**
+  * Get: Retrieve a list of companies that have visited a specified domain multiple times
 
 ## Credentials
 
