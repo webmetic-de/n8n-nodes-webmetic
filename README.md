@@ -1,26 +1,5 @@
 # n8n-nodes-webmetic
 
-🇩🇪 **Deutsch** | 🇬🇧 [English](#english)
-
-## Deutsch
-
-Dies ist ein n8n Community Node, mit dem Sie Webmetic in Ihren n8n Workflows verwenden können.
-
-[Webmetic](https://webmetic.de) bietet Unternehmensbesucher-Tracking-Daten für Vertriebs- und Marketingteams.
-
-[n8n](https://n8n.io/) ist eine [Fair-Code lizenzierte](https://docs.n8n.io/reference/license/) Workflow-Automatisierungsplattform.
-
-[Installation](#installation-de)  
-[Operationen](#operationen)  
-[Zugangsdaten](#zugangsdaten)  
-[Kompatibilität](#kompatibilität)  
-[Verwendung](#verwendung)  
-[Ressourcen](#ressourcen)
-
----
-
-## English
-
 This is an n8n community node that lets you use Webmetic in your n8n workflows.
 
 [Webmetic](https://webmetic.de) provides company visitor tracking data for sales and marketing teams.
@@ -32,60 +11,7 @@ This is an n8n community node that lets you use Webmetic in your n8n workflows.
 [Credentials](#credentials)  
 [Compatibility](#compatibility)  
 [Usage](#usage)  
-[Resources](#resources-en)  
-
-## Installation {#installation-de}
-
-Folgen Sie der [Installationsanleitung](https://docs.n8n.io/integrations/community-nodes/installation/) in der n8n Community Nodes Dokumentation.
-
-## Operationen
-
-* **Neue Besuche**
-  * Abrufen: Ruft eine Liste von Unternehmen ab, die eine bestimmte Domain zum ersten Mal besucht haben
-* **Intensive Besuche**
-  * Abrufen: Ruft eine Liste von Unternehmen ab, die intensive Besuche auf einer Domain hatten
-* **Wiederkehrende Besuche**
-  * Abrufen: Ruft eine Liste von Unternehmen ab, die eine Domain mehrfach besucht haben
-
-## Zugangsdaten
-
-Um diesen Node zu verwenden, benötigen Sie:
-
-1. Einen Webmetic API-Schlüssel - Erhalten Sie Ihren unter [Webmetic](https://webmetic.de)
-2. Konfigurieren Sie den API-Schlüssel in den n8n-Zugangsdaten
-
-## Kompatibilität
-
-* Erfordert n8n Version 0.172.0 oder höher
-* Getestet mit n8n Version 1.0.0+
-
-## Verwendung
-
-1. Fügen Sie den Webmetic-Node zu Ihrem Workflow hinzu
-2. Erstellen Sie neue Webmetic API-Zugangsdaten:
-   - Geben Sie Ihren API-Schlüssel ein (beginnt mit `wmtc_`)
-3. Konfigurieren Sie den Node:
-   - Wählen Sie "New Visits", "Intensive Visits" oder "Returning Visits" als Ressource
-   - Wählen Sie "Get" als Operation
-   - Geben Sie die Domain ein, die Sie verfolgen möchten (z.B. `example.com`)
-   - Optional: Konfigurieren Sie zusätzliche Felder für Datumsfilterung:
-     - **Von Datum**: Startdatum oder relativer Zeitraum (Standard: "-30 days")
-     - **Bis Datum**: Enddatum oder "now" für aktuelles Datum (Standard: "now")
-4. Führen Sie den Node aus, um Unternehmensbesucherdaten abzurufen
-
-Der Node liefert wertvolle Vertriebsinformationen über Unternehmen und deren Besuchsverhalten auf Ihrer Domain.
-
-### Datumsformat-Beispiele:
-- **Relative Zeiten**: `-30 days`, `-12 hours`, `-7 days`
-- **Absolute Daten**: `2023-01-01`, `2023-12-31`  
-- **Aktuell**: `now`
-
-## Ressourcen
-
-* [n8n Community Nodes Dokumentation](https://docs.n8n.io/integrations/community-nodes/)
-* [Webmetic API Dokumentation](https://hub.webmetic.de/docs)
-
----
+[Resources](#resources)  
 
 ## Installation
 
@@ -129,11 +55,12 @@ To use this node, you need:
 The node returns valuable sales intelligence about companies and their visiting behavior on your domain.
 
 ### Date Format Examples:
-- **Relative times**: `-30 days`, `-12 hours`, `-7 days`
+- **Relative times**: `-30 days`, `-12 hours`, `-45 minutes`, `-7 days`
 - **Absolute dates**: `2023-01-01`, `2023-12-31`  
 - **Current**: `now`
+- **Minutes**: `-15 minutes`, `-30 minutes`, `-90 minutes`
 
-## Resources {#resources-en}
+## Resources
 
 * [n8n community nodes documentation](https://docs.n8n.io/integrations/community-nodes/)
 * [Webmetic API documentation](https://hub.webmetic.de/docs)

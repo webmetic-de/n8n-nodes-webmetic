@@ -181,7 +181,7 @@ export class Webmetic implements INodeType {
             type: "string",
             default: "-30 days",
             placeholder: "-30 days",
-            description: "Starting date/time or relative date like '-30 days', '-12 hours'. Examples: '2023-01-01', '-7 days', 'now'",
+            description: "Starting date/time or relative date like '-30 days', '-12 hours', '-45 minutes'. Examples: '2023-01-01', '-7 days', '-30 minutes', 'now'",
             routing: {
               request: {
                 qs: {
@@ -196,7 +196,7 @@ export class Webmetic implements INodeType {
             type: "string",
             default: "now",
             placeholder: "now",
-            description: "Ending date/time or 'now' for current date/time. Examples: '2023-01-31', 'now'",
+            description: "Ending date/time or 'now' for current date/time. Examples: '2023-01-31', '-15 minutes', 'now'",
             routing: {
               request: {
                 qs: {
