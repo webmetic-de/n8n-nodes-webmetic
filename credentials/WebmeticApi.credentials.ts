@@ -1,5 +1,6 @@
 import {
   IAuthenticateGeneric,
+  ICredentialTestRequest,
   ICredentialType,
   INodeProperties,
 } from "n8n-workflow";
@@ -26,6 +27,19 @@ export class WebmeticApi implements ICredentialType {
     properties: {
       headers: {
         Authorization: "={{$credentials.apiKey}}",
+      },
+    },
+  };
+
+  test: ICredentialTestRequest = {
+    request: {
+      baseURL: "https://hub.webmetic.de",
+      url: "/new-visits",
+      method: "GET",
+      qs: {
+        domain: "example.com",
+        from_date: "-1 days",
+        to_date: "now",
       },
     },
   };
